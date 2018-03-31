@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/katacoda/scenario-example/master/example-index-json/index.jsonschema",
     "pathwayTitle": "Ogham",
     "title": "Sending email with Ogham",
     "description": "Learn how to send emails using Ogham",
@@ -7,7 +8,8 @@
     "details": {
         "intro": {
             "text": "intro.md",
-            "courseData": "env-init.sh"
+            "courseData": "env-init-docker.sh",
+            "code": "env-init-progress.sh"
         },
         "steps": [
             {
@@ -23,17 +25,20 @@
             "text": "finish.md"
         },
         "assets": {
-            "client": [
+            "host01": [
                 {
-                    "file": "*",
-                    "target": "~/code"
+                    "file": "code/pom.xml",
+                    "target": "/root"
+                },
+                {
+                    "file": "code/src/main/java/*",
+                    "target": "/root/src/main/java"
                 }
             ]
         }
     },
     "files": [
-        "~/code/pom.xml",
-        "~/code/src/main/java/FirstEmail.java"
+        
     ],
     "environment": {
         "showdashboard": true,
