@@ -1,4 +1,9 @@
-ssh root@host01 'LOGFILE=/var/log/ogham-katacoda-debug.log && echo "" > $LOGFILE 2>&1 && apt update >> $LOGFILE 2>&1 && apt install -y git openjdk-8-jdk maven apache2 roundcube-sqlite3 >> $LOGFILE 2>&1 && service apache2 start'
+ssh root@host01 'LOGFILE=/var/log/ogham-katacoda-debug.log && echo "" > $LOGFILE 2>&1 && docker run -p 143:143 -p 587:587 -p 8000:80 -e ROUNDCUBEMAIL_DEFAULT_HOST=mail -d roundcube/roundcubemail:1.3.4 >> $LOGFILE 2>&1'
+
+
+#ssh root@host01 'LOGFILE=/var/log/ogham-katacoda-debug.log && echo "" > $LOGFILE 2>&1 && apt update >> $LOGFILE 2>&1 && apt install -y git openjdk-8-jdk maven apache2 roundcube-sqlite3 >> $LOGFILE 2>&1 && service apache2 start'
+
+
 
 # #docker-compose up -d
 # LOGFILE=/var/log/ogham-katacoda-debug.log

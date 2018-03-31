@@ -40,7 +40,7 @@
         "dashboards": [
             {
                 "name": "Webmail",
-                "port": 80
+                "port": 8000
             }
         ],
         "uilayout": "editor-terminal",
