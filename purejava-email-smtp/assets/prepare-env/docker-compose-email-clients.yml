@@ -1,0 +1,9 @@
+version: "3"
+services:
+
+  roundcubemail:
+    image: roundcube/roundcubemail:1.3.4
+    ports:
+      - "143"
+      - "587"
+      - "8000:80"

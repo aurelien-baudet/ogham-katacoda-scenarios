@@ -1,0 +1,39 @@
+/**
+    'com.github.johnrengelman.shadow' is only needed for the sample in order to package a JAR that contains
+    all dependencies. 
+
+    This is done for Katacoda and it is NOT required by Ogham at all.
+
+    Fat JAR (JAR containing all dependencies) is used in this case to make the command line is easier to run:
+
+        $ java -cp your-artifact-0.0.1-SNAPSHOT.jar
+
+    Instead of:
+                
+        $ java -cp your-artifact-0.0.1-SNAPSHOT.jar \
+                            .m2/repository/<path-to-dependency-1> \
+                            .m2/repository/<path-to-dependency-2> \
+                            .m2/repository/<path-to-dependency-3> \
+                            ...
+                            .m2/repository/<path-to-dependency-n> \
+ */
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    // Include ogham dependency here
+}

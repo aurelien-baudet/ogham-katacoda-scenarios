@@ -1,0 +1,15 @@
+version: "3"
+services:
+
+  maven:
+    image: maven:3.5.3-jdk-8-slim
+
+  gradle:
+    image: gradle:4.6.0-jdk8
+
+  web:
+    image: nginx:1.12.2
+    ports:
+      - "80"
+    volumes:
+      - /home/resources:/usr/share/nginx/html:ro

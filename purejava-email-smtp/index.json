@@ -8,8 +8,8 @@
     "details": {
         "intro": {
             "text": "intro.md",
-            "courseData": "env-init-docker.sh",
-            "code": "env-init-progress.sh"
+            "courseData": "assets/prepare-env/ssh-wrapper.sh",
+            "code": "assets/prepare-env/configure-terminal-and-display-install-progress.sh"
         },
         "steps": [
             {
@@ -25,14 +25,38 @@
             "text": "finish.md"
         },
         "assets": {
+            "client": [
+                
+            ],
             "host01": [
                 {
-                    "file": "code/pom.xml",
-                    "target": "/root"
+                    "file": "prepare-env/*",
+                    "target": "/home/env"
                 },
                 {
-                    "file": "code/src/main/java/*",
-                    "target": "/root/src/main/java"
+                    "file": "prepare-env/prepare-tools-and-email-clients.sh",
+                    "target": "/home/env",
+                    "chmod": "+x"
+                },
+                {
+                    "file": "tutorial/pom.xml",
+                    "target": "/home/tutorial"
+                },
+                {
+                    "file": "tutorial/build.gradle",
+                    "target": "/home/tutorial"
+                },
+                {
+                    "file": "tutorial/src/main/java/*",
+                    "target": "/home/tutorial/src/main/java"
+                },
+                {
+                    "file": "resources/images/icons/maven-logo.png",
+                    "target": "/home/resources/images/icons"
+                },
+                {
+                    "file": "resources/images/icons/gradlephant-logo.png",
+                    "target": "/home/resources/images/icons"
                 }
             ]
         }
@@ -44,8 +68,12 @@
         "showdashboard": true,
         "dashboards": [
             {
-                "name": "Webmail",
+                "name": "Roundcubemail",
                 "port": 8000
+            },
+            {
+                "name": "nginx",
+                "port": 80
             }
         ],
         "uilayout": "editor-terminal",
