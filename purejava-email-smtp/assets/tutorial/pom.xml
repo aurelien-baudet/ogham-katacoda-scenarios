@@ -33,7 +33,7 @@
                 .m2/repository/<path-to-dependency-2> \
                 .m2/repository/<path-to-dependency-3> \
                 ...
-                .m2/repository/<path-to-dependency-n> \
+                .m2/repository/<path-to-dependency-n>
   -->
   <build>
     <plugins>

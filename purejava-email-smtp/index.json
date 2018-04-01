@@ -110,6 +110,7 @@
         
     ],
     "environment": {
+        "uieditorpath": "/home/tutorial",
         "showdashboard": true,
         "dashboards": [
             {
