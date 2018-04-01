@@ -1,10 +1,8 @@
-TODO: docker-compose pour les clients mail
+TODO: mail server ? directly on katacoda or remote on the internet ?
 
-TODO: server mail ? local ou distant ?
+TODO: js script to choose between maven and gradle ("choose your weapons") -> global selection (update all tabs) ?
 
-TODO: script pour choix maven ou gradle (choix des armes)
-
-TODO: ajouter gradle
+FIXME: make gradle build work
 
 
 

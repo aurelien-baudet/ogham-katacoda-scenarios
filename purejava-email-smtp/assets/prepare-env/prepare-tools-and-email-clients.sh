@@ -17,17 +17,28 @@ separator() {
   echo "" >> $STEPSFILE
 }
 
+mark_ready() {
+  touch /var/run/$1-ready
+}
 
 
 {
+  ln -sf /home/env/commands/temp-java.sh /usr/bin/java
+  ln -sf /home/env/commands/temp-mvn.sh /usr/bin/mvn
+  ln -sf /home/env/commands/temp-gradle.sh /usr/bin/gradle
+
   step "Preparing environment..."
 
   step "   Preparing tools..."
   step "      Starting nginx..."
   docker-compose -f $ENVDIR/docker-compose-tools.yml up -d web
   step "      nginx ready !"
+  step ""
   step "      Preparing Java, Gradle and Maven..."
   docker-compose -f $ENVDIR/docker-compose-tools.yml pull
+  mark_ready "java"
+  mark_ready "mvn"
+  mark_ready "gradle"
   step "      Java, Gradle and Maven are ready !"
   step "   You can now build using Maven"
 
