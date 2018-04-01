@@ -84,7 +84,15 @@
                     "target": "/home/resources/images/icons"
                 },
                 {
+                    "file": "resources/images/icons/maven-logo.png.sha1",
+                    "target": "/home/resources/images/icons"
+                },
+                {
                     "file": "resources/images/icons/gradlephant-logo.png",
+                    "target": "/home/resources/images/icons"
+                },
+                {
+                    "file": "resources/images/icons/gradlephant-logo.png.sha1",
                     "target": "/home/resources/images/icons"
                 }
             ]
