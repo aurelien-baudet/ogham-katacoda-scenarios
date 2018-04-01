@@ -8,8 +8,8 @@
     "details": {
         "intro": {
             "text": "intro.md",
-            "courseData": "assets/prepare-env/debug-parent-env.sh",
-            "code": "assets/prepare-env/debug-current-env.sh"
+            "courseData": "assets/prepare-env/ssh-wrapper.sh",
+            "code": "assets/prepare-env/display-install-progress.sh"
         },
         "steps": [
             {
@@ -26,10 +26,7 @@
         },
         "assets": {
             "client": [
-                {
-                    "file": "resources/javascripts/test.js",
-                    "target": "~/"
-                }
+                
             ],
             "host01": [
                 {
