@@ -1,9 +1,7 @@
 # Add Ogham dependency
 
 
-![Test][https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/images/icons/maven-logo.png]
-
-____
+![___][___]
 
   ![Maven][maven-logo]
   --------------------
@@ -23,7 +21,7 @@ ____
     compile "fr.sii.ogham:ogham-all:2.0.0"
   </pre>
 
-____
+![___][___]
 
 
 # Prepare Ogham
@@ -42,6 +40,8 @@ MessagingService service = MessagingBuilder.standard()
 
 <pre class="file" data-filename="src/main/java/FirstEmail.java" data-target="prepend">
 import fr.sii.ogham.core.builder.MessagingBuilder;
+import fr.sii.ogham.core.service.MessagingService;
+import fr.sii.ogham.email.message.Email;
 </pre>
 
 # Send your first email
@@ -79,5 +79,6 @@ java -cp target/your-artifact-0.0.1-SNAPSHOT.jar FirstEmail
 
 
 
-[maven-logo]: //raw.githubusercontent.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/icons/maven-logo.png
-[gradle-logo]: //raw.githubusercontent.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/icons/gradlephant-logo.png
+[___]: //rawgit.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/1px.png
+[maven-logo]: //rawgit.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/icons/maven-logo.png
+[gradle-logo]: //rawgit.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/icons/gradlephant-logo.png

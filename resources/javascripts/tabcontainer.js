@@ -1,21 +1,31 @@
 (function() {
+	// p img[1px][___]
+	// h2
+	// ...
+	// h2
+	// ...
+	// p img[1px][___]
 	var process = function() {
-		var tabContainerStarts = $('.tab-container');
-		var tabContainerEnds = $('.tab-container-end');
-		if(tabContainerStarts.length!=tabContainerEnds.length) {
+		var tabContainerSeparators = $('p > img[alt="___"]').parent();
+		$('img[alt="___"]').removeAttr('data-featherlight');
+		
+		
+		// var tabContainerStarts = $('p img[src~="1px"][alt="___"]').parent();
+		// var tabContainerEnds = $('p img[src~="1px"][alt="___"]');
+		if(tabContainerSeparators.length % 2 != 0) {
 			throw new Error("The number of tab-container is different from tab-container-end");
 		}
-		for(var i=0 ; i<tabContainerStarts.length ; i++) {
-			generateTabContainer(i, tabContainerStarts[i], tabContainerEnds[i]);
+		for(var i=0 ; i<tabContainerSeparators.length ; i+=2) {
+			generateTabContainer(i, tabContainerSeparators[i], tabContainerSeparators[i+1]);
 		}
 	}
 	
 	var generateTabContainer = function(/*int*/group, /*Node*/start, /*Node*/end) {
-		var tabs = $(start).nextUntil(end, '.tab');
+		var tabs = $(start).nextUntil(end, 'h2');
 		var height = 0;
 		for(var i=0 ; i<tabs.length ; i++) {
 			var tab = tabs[i];
-			var tabTitleNode = $(tab).find('p');
+			var tabTitleNode = $(tab).find('h2');
 			var tabTitle = tabTitleNode.html();
 			var contentNodes = $(tab).nextUntil(tabs[i+1] || end);
 			var contentHeight = computeHeight($(contentNodes));
@@ -30,6 +40,7 @@
 			$(start).append(tab);
 			tabTitleNode.replaceWith('<label class="tab-label" for="tab-'+group+'-'+i+'">'+tabTitle+'</label>');
 		}
+		$(start).addClass('tab-container')
 		$(start).css('height', (height+45+42)+'px');			// TODO: height of tab... This is really bad :(
 		$(end).remove();
 	}
