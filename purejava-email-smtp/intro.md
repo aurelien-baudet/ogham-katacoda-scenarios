@@ -6,5 +6,5 @@ FIXME: make gradle build work
 
 
 
-<link href="//groupe-sii.github.io/ogham/v2.0.0/styles/tabcontainer.css" rel="stylesheet" type="text/css" />
-<script src="//groupe-sii.github.io/ogham/v2.0.0/javascripts/tabcontainer.js" type="text/javascript"></script>
+<link href="//raw.githubusercontent.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/styles/tabcontainer.css" rel="stylesheet" type="text/css" />
+<script src="//raw.githubusercontent.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/javascripts/tabcontainer.js" type="text/javascript"></script>

@@ -29,11 +29,6 @@ mark_ready() {
 
   step "Preparing environment..."
 
-  step "   Preparing tools..."
-  step "      Starting nginx..."
-  docker-compose -f $ENVDIR/docker-compose-tools.yml up -d web
-  step "      nginx ready !"
-  step ""
   step "      Preparing Java, Gradle and Maven..."
   docker-compose -f $ENVDIR/docker-compose-tools.yml pull
   mark_ready "java"

@@ -79,5 +79,5 @@ java -cp target/your-artifact-0.0.1-SNAPSHOT.jar FirstEmail
 
 
 
-[maven-logo]: //groupe-sii.github.io/ogham/v2.0.0/images/icons/maven-logo.png
-[gradle-logo]: //groupe-sii.github.io/ogham/v2.0.0/images/icons/gradlephant-logo.png
+[maven-logo]: //raw.githubusercontent.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/icons/maven-logo.png
+[gradle-logo]: //raw.githubusercontent.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/icons/gradlephant-logo.png
