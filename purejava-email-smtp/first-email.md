@@ -40,8 +40,6 @@ MessagingService service = MessagingBuilder.standard()
 
 <pre class="file" data-filename="src/main/java/FirstEmail.java" data-target="prepend">
 import fr.sii.ogham.core.builder.MessagingBuilder;
-import fr.sii.ogham.core.service.MessagingService;
-import fr.sii.ogham.email.message.Email;
 </pre>
 
 # Send your first email

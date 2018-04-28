@@ -9,11 +9,30 @@ blockquote.steps p {
 	left: -18px
 }
 
+[href="step"] {
+	display: none;
+}
+[href="step"]:first-child {
+	display: block;
+	visibility: hidden;
+}
+[href="step"]:first-child:before {
+	content: "";
+	display: block;
+	visibility: visible;
+	background: url(//rawgit.com/aurelien-baudet/ogham-katacoda-scenarios/master/resources/images/ajax-loader.gif) center center no-repeat;
+	height: 200px;
+}
+
 .steps [href="step"] {
+	visibility: visible;
 	display: block;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	cursor: not-allowed;
+}
+.steps [href="step"]:before {
+	display: none;
 }
 
 

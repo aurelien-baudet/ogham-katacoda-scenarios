@@ -14,6 +14,7 @@ Scenarios:
   Preparation:
     ☐ @critical  find a fun subject (user is a messaging god ?)
     ☐ @critical  Organize scenarios based on fun subject
+    ☐ @high      Add a preparation step (add maven dep) ?
 
   Email scenario:
     intro:
