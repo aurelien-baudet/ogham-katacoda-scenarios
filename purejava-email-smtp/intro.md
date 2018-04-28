@@ -1,8 +1,4 @@
-TODO: mail server ? directly on katacoda or remote on the internet ?
 
-TODO: js script to choose between maven and gradle ("choose your weapons") -> global selection (update all tabs) ?
-
-FIXME: make gradle build work
 
 
 Learning path:

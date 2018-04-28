@@ -1,0 +1,40 @@
+Technical:
+ ☐ @high      provide a mail server directly on Katacoda ?
+ ☐ @low       display email clients directly on Katacoda (like a terminal)
+ ☐ @low       js script to choose between maven and gradle ("choose your weapons") -> global selection (update all tabs) ?
+ ☐ @high      make tabs work
+
+
+Ogham:
+  ☐ @high      Integrate Katacoda directly on Ogham site
+  ☐ @high      Integrate Katacoda directly on Github (at least a link with image)
+  ☐ @critical  Build with Gradle
+
+Scenarios:
+  Preparation:
+    ☐ @critical  find a fun subject (user is a messaging god ?)
+    ☐ @critical  Organize scenarios based on fun subject
+
+  Email scenario:
+    intro:
+      ☐ @high      Introduction text
+    1st email:
+      ☐ @high      Explanations
+    html body:
+      ☐ @high      Sample/code
+      ☐ @high      Explanations
+    vars in subject:
+      ☐ @high      Sample/code
+      ☐ @high      Explanations
+    templating (images+css):
+      ☐ @high      Sample/code
+      ☐ @high      Explanations
+    text fallback:
+      ☐ @high      Sample/code
+      ☐ @high      Explanations
+    attachments:
+      ☐ @high      Sample/code
+      ☐ @high      Explanations
+
+  SMS scenario:
+
