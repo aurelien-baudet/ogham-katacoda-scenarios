@@ -59,21 +59,25 @@ import fr.sii.ogham.email.message.Email;
 
 # Build
 
-`
-mvn package
-`{{execute}}
+
+![___][___]
+
+  ![Maven][maven-logo]
+  --------------------
+
+  `mvn package`{{execute}}
 
 
-`
-gradle build
-`{{execute}}
+  ![Gradle][gradle-logo]
+  ----------------------
 
+  `gradle build`{{execute}}
+
+![___][___]
 
 # Run
 
-`
-java -cp target/your-artifact-0.0.1-SNAPSHOT.jar FirstEmail
-`{{execute}}
+`java -cp target/your-artifact-0.0.1-SNAPSHOT.jar FirstEmail`{{execute}}
 
 
 

@@ -25,23 +25,25 @@
 		var height = 0;
 		for(var i=0 ; i<tabs.length ; i++) {
 			var tab = tabs[i];
-			var tabTitleNode = $(tab).find('h2');
-			var tabTitle = tabTitleNode.html();
+			var tabTitleNodes = $(tab).children()
 			var contentNodes = $(tab).nextUntil(tabs[i+1] || end);
-			var contentHeight = computeHeight($(contentNodes));
-			if(contentHeight>height) {
-				height = contentHeight;
-			}
+			$(tab).addClass('tab');
+			$(tab).prepend('<label class="tab-label" for="tab-'+group+'-'+i+'"></label>');
+			$(tab).find('label').append(tabTitleNodes);
 			$(tab).prepend('<input type="radio" id="tab-'+group+'-'+i+'" name="tab-group-'+group+'" '+(i==0 ? 'checked' : '')+'>');
 			$(tab).append('<div class="tab-content">');
 			var tabContentNode = $(tab).find('.tab-content');
 			$(tabContentNode).append(contentNodes);
 			$(tab).append(tabContentNode);
 			$(start).append(tab);
-			tabTitleNode.replaceWith('<label class="tab-label" for="tab-'+group+'-'+i+'">'+tabTitle+'</label>');
+			// track the height of the biggest tab
+			var contentHeight = computeHeight($(contentNodes));
+			if(contentHeight>height) {
+				height = contentHeight;
+			}
 		}
 		$(start).addClass('tab-container')
-		$(start).css('height', (height+45+42)+'px');			// TODO: height of tab... This is really bad :(
+		$(start).css('height', (height+60+42)+'px');			// TODO: height of tab... This is really bad :(
 		$(end).remove();
 	}
 	

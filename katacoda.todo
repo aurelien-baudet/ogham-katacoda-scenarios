@@ -2,7 +2,7 @@ Technical:
  ✔ @high      provide a mail server directly on Katacoda ? @done (2018-4-29 17:45:15)
  ☐ @low       display email clients directly on Katacoda (like a terminal)
  ☐ @low       js script to choose between maven and gradle ("choose your weapons") -> global selection (update all tabs) ?
- ☐ @high      make tabs work
+ ✔ @high      make tabs work @done (2018-4-29 19:40:07)
  ☐ @high      display progression of environment prepration in page (mvn, gradle, webmails...)
  ☐ @low       fix docker image versions (fork in dedicated repository ?)
 
