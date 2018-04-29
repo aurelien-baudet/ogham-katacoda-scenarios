@@ -1,9 +1,39 @@
 version: "3"
 services:
 
+
+  imap-server:
+    image: antespi/docker-imap-devel:latest
+    container_name: imap-server
+    ports:
+      - "10025:25"
+      - "10143:143"
+      - "10993:993"
+    volumes:
+      - ./config/dovecot/conf.d/10-auth.conf:/etc/dovecot/conf.d/10-auth.conf
+      - ./config/dovecot/conf.d/10-logging.conf:/etc/dovecot/conf.d/10-logging.conf
+      # - ./config/dovecot/conf.d/10-mail.conf:/etc/dovecot/conf.d/10-mail.conf
+      # - ./config/dovecot/conf.d/10-master.conf:/etc/dovecot/conf.d/10-master.conf
+      - ./config/dovecot/conf.d/10-ssl.conf:/etc/dovecot/conf.d/10-ssl.conf
+      # - ./config/dovecot/conf.d/15-mailboxes.conf:/etc/dovecot/conf.d/15-mailboxes.conf
+      # - ./config/dovecot/conf.d/20-lmtp.conf:/etc/dovecot/conf.d/20-lmtp.conf
+      # - ./config/dovecot/conf.d/auth-passwdfile.inc:/etc/dovecot/conf.d/auth-passwdfile.inc
+    environment:
+      - MAILNAME=example.org
+      - MAIL_ADDRESS=demo-user@example.org
+      - MAIL_PASS=pass
+
   roundcubemail:
     image: roundcube/roundcubemail:1.3.4
     ports:
       - "11143:143"
       - "11587:587"
       - "11080:80"
+    environment:
+      - ROUNDCUBEMAIL_DEFAULT_HOST=imap://imap-server
+      - ROUNDCUBEMAIL_DEFAULT_PORT=143
+      - ROUNDCUBEMAIL_SMTP_SERVER=smtp://imap-server
+      - ROUNDCUBEMAIL_SMTP_PORT=25
+      - ROUNDCUBEMAIL_DB_TYPE=sqlite
+    links:
+      - imap-server

@@ -38,6 +38,38 @@
                     "target": "/home/env"
                 },
                 {
+                    "file": "prepare-env/config/dovecot/conf.d/10-auth.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/10-logging.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/10-mail.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/10-master.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/10-ssl.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/15-mailboxes.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/20-lmtp.conf",
+                    "target": "/home/env/config/dovecot/conf.d"
+                },
+                {
+                    "file": "prepare-env/config/dovecot/conf.d/auth-passwdfile.inc",
+                    "target": "/home/env/config/dovecot/conf.d/auth-passwdfile.inc"
+                },
+                {
                     "file": "prepare-env/commands/temp-cmd.sh",
                     "target": "/home/env/commands",
                     "chmod": "+x"

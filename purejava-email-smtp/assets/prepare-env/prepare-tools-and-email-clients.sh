@@ -23,9 +23,11 @@ mark_ready() {
 
 
 {
-  ln -sf /home/env/commands/temp-java.sh /usr/bin/java
-  ln -sf /home/env/commands/temp-mvn.sh /usr/bin/mvn
-  ln -sf /home/env/commands/temp-gradle.sh /usr/bin/gradle
+  set -x
+
+  ln -sf $ENVDIR/commands/temp-java.sh /usr/bin/java
+  ln -sf $ENVDIR/commands/temp-mvn.sh /usr/bin/mvn
+  ln -sf $ENVDIR/commands/temp-gradle.sh /usr/bin/gradle
 
   step "Preparing environment..."
 
@@ -48,7 +50,8 @@ mark_ready() {
 
   step "   Starting mail clients..."
   # TODO: distinct step for each email client ?
-  docker-compose -f $ENVDIR/docker-compose-email-clients.yml up -d roundcubemail
+  cd $ENVDIR
+  docker-compose -f $ENVDIR/docker-compose-email-clients.yml up -d
   step "   Mail clients are ready !"
 
   separator "   "

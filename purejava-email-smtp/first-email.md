@@ -30,8 +30,8 @@
 MessagingService service = MessagingBuilder.standard()
         .environment()
             .properties()
-                .set("mail.smtp.host", "host01")
-                .set("mail.smtp.port", "587")
+                .set("mail.smtp.host", "host01")  // host available for demo email server
+                .set("mail.smtp.port", "10025")   // smtp port available for demo email server
                 .and()
             .and()
         .build();
@@ -46,10 +46,10 @@ import fr.sii.ogham.core.builder.MessagingBuilder;
 
 <pre class="file" data-filename="src/main/java/FirstEmail.java" data-target="insert" data-marker="// Add email sending code here">
 service.send(new Email()
-      .from("myusername@myprovider.com")
-      .subject("subject")
-      .content("email content")
-      .to("ogham-test@yopmail.com"));
+      .from("sender-email-adress@your-provider.com")  // you can use anything you want as sender
+      .subject("This is the subject of the email")
+      .content("This is the content of the email")
+      .to("demo-user@example.org"));   // this is the email address used by the demo email server
 </pre>
 
 <pre class="file" data-filename="src/main/java/FirstEmail.java" data-target="prepend">
